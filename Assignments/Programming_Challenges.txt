@@ -1,0 +1,1467 @@
+
+#############################################################
+#					Programming Challenges				    #
+#						Devinder Goyal                      #
+#                          C0713493                         #
+#############################################################
+
+=============================
+|ASSIGNMENT 1				|
+|+++++++++++++++++++++++++++|
+|Chapter 1					|
+=============================
+
+1. Your First Java Program
+
+// This is my first Java program.
+public class MyFirstProgram
+{
+public static void main(String[] args)
+{
+System.out.println(“Hello World!”);
+}
+
+=============================
+|ASSIGNMENT 1				|
+|+++++++++++++++++++++++++++|
+|Chapter 2					|
+=============================
+
+13. import java.util.Scanner;
+public class InputFromUser 
+{
+		public static void main(String[] args)
+		{
+		double desiredIncome;
+		Scanner s = new Scanner(System.in); 
+		System.out.print(" What Your Desired Income?"); 
+		desiredIncome=s.nextDouble(); 	
+		System.out.println( " Income is " + desiredIncome);
+		}
+}
+
+
+14. import javax.swing.JOptionPane; 
+ public class InputFromUser2
+ 		{
+ 		public static void main(String [] args)
+ 		{ 		 String input1;
+ 		double desiredIncome; 		
+		input1 = JOptionPane.showInputDialog("What is your desired Income ?"); 			desiredIncome = Double.parseDouble(input1); 	
+JOptionPane.showMessageDialog(null, "Your desired income is: " + desiredIncome );
+ 	 	}
+}
+
+
+15. 
+double number = 10.5;             
+   // float  total = number;              // error, double to float, no implicit
+ 		 float total = (float) number;  
+
+		 
+#### Programming Challenge
+
+Programming Challenge
+1.	Name , Age and annual Income
+public class PersonalDetail
+{
+	static String name;
+	static int age;
+	static double annualPay;
+	public static void main(String[] args)
+	{
+		name = "Harpal Singh";
+		age = 22;
+		annualPay = 100000.0;
+		System.out.println("My Name is "+name+",my age is "+age+" and i hope to earn $"+annualPay+" per year.");
+	}
+}
+2.	Name and Initials
+import java.util.Scanner;
+
+public class PersonlInfo
+{
+	static String name;
+static String middleName;
+static String lastName;
+static char firstInitial;
+static char middleInitial;
+static char lastInitial;
+
+public static void main(String[] args) {
+Scanner myScanner = new Scanner(System.in);
+
+System.out.print( "Enter your first name: " );
+firstName = myScanner.nextLine();
+firstInitial = firstName.charAt(0);
+
+System.out.print( "Enter your middle name: " );
+middleName = myScanner.nextLine();
+middleInitial= middleName.charAt(0);
+
+System.out.print( "Enter your last name: " );
+lastName = myScanner.nextLine();
+lastInitial = lastName.charAt(0);
+
+System.out.println( "First name: " + firstName );
+System.out.println( "First Initial: " + firstInitial );
+System.out.println( "Middle name: " + middleName );
+System.out.println( "Middle Initial: " + middleInitial );
+System.out.println( "Last name: " + lastName );
+System.out.println( "Last Initial: " + lastInitial );
+} 
+}
+3.	Personal Information
+public class PersonalInfo
+{
+	static String name;
+	static String add;
+	static String major;
+	static long tel;
+	public static void main(String[] args)
+	{
+		name = "Harpal Singh";
+		add = "167 minglehaze Dr,Etobicoke, M9V4W7";
+		tel = 6477671290L;
+		major = "Mobile Development";
+		System.out.println("My Name is "+name+"\nMy address is "+add+"\nMy telephone number is"+tel+"\n My major in College is"+major);
+	}
+}
+4.	Star Pattern
+class Star
+{
+	public static void main(String[] args) 
+	{
+		int i,j,k;
+		for(i=1;i<=5;i++)
+		{
+			for(j=i;j<5;j++)
+			{
+				System.out.print(" ");
+			}
+			for(k=1;k<(i*2);k++)
+			{
+				System.out.print("*");
+			}
+		System.out.println();
+		}
+		
+		for(i=4;i>=1;i--)
+		{
+			for(j=5;j>i;j--)
+			{
+				System.out.print(" ");
+			}
+				for(k=1;k<(i*2);k++)
+			{
+			System.out.print("*");
+			}
+		System.out.println();
+		}
+	}
+}
+5.	Sales Prediction
+class SalesPrediction
+{
+	public static void main(String[] args) 
+	{
+		double PoTS = .62;
+		double CompSales = 4600000;
+		double ECSales = CompSales * PoTS;
+
+	System.out.print("The East Coast division is predicted to generate $");
+System.out.print(ECSales+" in sales."); 
+	}
+}
+
+
+=============================
+|ASSIGNMENT 2    			|
+|+++++++++++++++++++++++++++|
+|Chapter 3		         	|
+=============================
+
+Programming Challenge
+1.	Roman Numerals
+
+import java.util.Scanner;
+public class RomanNumerals 
+{	public static void main(String[] args) 
+	{	int number;
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter a number 1 - 10 ");
+		number=sc.nextInt();
+		if(number < 1 ||  number > 10)
+		{
+			System.out.println("Invalid input! Please enter only 1 - 10");
+		}
+		else
+		{
+		 switch (number) 
+		{ 
+		case 1 : 
+		System.out.println("The Arabic numeral " + number + " converts to the Roman numeral I"); 
+				break; 
+		case 2 :  
+		System.out.println("The Arabic numeral " + number + " converts to the Roman numeral II"); 
+				break; 
+		case 3 : 
+		System.out.println("The Arabic numeral " + number + " converts to the Roman numeral III"); 
+				break; 
+		case 4 : 
+		System.out.println("The Arabic numeral " + number + " converts to the Roman numeral IV"); 
+				break; 
+		case 5 : 
+		System.out.println("The Arabic numeral " + number + " converts to the Roman numeral V"); 
+				break; 
+		case 6 : 
+		System.out.println("The Arabic numeral " + number + " converts to the Roman numeral VI"); 
+				break; 
+		case 7 : 
+		System.out.println("The Arabic numeral " + number + " converts to the Roman numeral VII"); 
+				break; 
+		case 8 : 
+		System.out.println("The Arabic numeral " + number + " converts to the Roman numeral VIII"); 
+				break;
+		case 9 : 
+		System.out.println("The Arabic numeral " + number + " converts to the Roman numeral IX");
+				break;
+		case 10 : 
+		System.out.println("The Arabic numeral " + number + " converts to the Roman numeral X"); 
+				break;					
+		}
+
+		}
+	}
+}
+
+2.	Magic Dates
+
+import javax.swing.JOptionPane;
+
+public class MagicDates {
+	public static void main (String[] args)
+	{
+		String month,day,year;
+		Integer ans;
+		month= JOptionPane.showInputDialog("Please Input Month :");
+		Integer.parseInt(month);
+		day= JOptionPane.showInputDialog("Please Input Day :");
+		Integer.parseInt(day);
+		year= JOptionPane.showInputDialog("Please Input Year in two digits :");
+		Integer.parseInt(year);
+		Integer a = (Integer.valueOf(month));
+		Integer b = (Integer.valueOf(day));
+		Integer c = (Integer.valueOf(year));
+		ans = a * b;
+		if (c == ans)
+		{
+		System.out.print("Date is Magic!!");
+		}
+		else
+		{
+			System.out.print("Date is not Magic!");
+		}
+		
+	}
+}
+3.	Body Mass Index
+
+import javax.swing.JOptionPane;
+
+public class BMI{
+	public static void main (String[] args)
+	{
+		String height,weight;
+		Integer BMI;
+		height= JOptionPane.showInputDialog("Please Input Height :");
+		Integer.parseInt(height);
+		weight= JOptionPane.showInputDialog("Please Input Weight :");
+		Integer.parseInt(weight);
+		Integer h = (Integer.valueOf(height));
+		Integer w = (Integer.valueOf(weight));
+		BMI = w * 703 / h;
+		if (BMI < 18.5)
+		{
+		System.out.print("Person is Under Weight!!");
+		}
+		else if (BMI > 25)
+		{
+		System.out.print("Person is Over Weight!!");
+		}
+		else
+		{
+		System.out.print("Pls enter Valid Weight!!");	
+		}
+	}
+}
+
+4.	Test Scores and Grades
+import javax.swing.JOptionPane;
+
+public class Grade1{
+	public static void main (String[] args)
+	{
+		String m1,m2;
+		Integer avg,sum;
+		m1= JOptionPane.showInputDialog("Please Input Mark1 :");
+		Integer.parseInt(m1);
+		m2= JOptionPane.showInputDialog("Please Input Mark2 :");
+		Integer.parseInt(m2);
+		Integer mark1 = (Integer.valueOf(m1));
+		Integer mark2 = (Integer.valueOf(m2));
+		sum = mark1 + mark2;
+		System.out.println("Sum is :"+sum);
+		avg = sum/ 2;
+		System.out.println("Average is : "+avg);
+		
+		if (avg > 90 && avg <= 100)
+		{
+			System.out.print("A");
+		}
+		if (avg > 80 && avg <= 89)
+		{
+			System.out.print("B");
+		}
+		if (avg > 70 && avg <= 79)
+		{
+			System.out.print("C");
+		}
+		if (avg > 60 && avg <= 69)
+		{
+			System.out.print("D");
+		}
+		if (avg < 60)
+		{
+			System.out.print("F");
+		}}}
+
+5.	Mass and Weight
+
+import javax.swing.JOptionPane;
+
+public class Mass{
+	public static void main (String[] args)
+	{
+		String mass;
+		double weight;
+		mass= JOptionPane.showInputDialog("Please Input Mark1 :");
+		Double.parseDouble(mass);
+		double m1 = Double.valueOf(mass);
+		weight = m1 * 9.8;
+		System.out.println("Following Mass's Newton is : "+weight);
+		if (weight < 10)
+		{
+			System.out.println("The Object is too light");
+		}
+		if (weight > 1000)
+		{
+			System.out.println("The Object is too heavy");
+		}	
+	}
+}
+
+
+=============================
+|ASSIGNMENT 2    			|
+|+++++++++++++++++++++++++++|
+|Chapter 4		         	|
+=============================
+
+Programming Challenge
+
+6.	File Letter Counter
+
+import java.util.Scanner;
+import java.io.*;
+
+public class FileLetterCounter 
+{
+
+	public static void main(String[] args) throws IOException
+	{
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter file name: ");
+		String fileName = sc.nextLine();
+
+		File file = new File(fileName + ".txt");
+		
+		if(!file.exists())
+		{
+			System.out.println("The file " + fileName + ".txt does not exist.");
+			System.exit(0);
+		}
+		
+		Scanner filesc = new Scanner(file);
+		
+				
+		System.out.println("Enter a single character: ");
+		String charsc = sc.nextLine();
+		char character = charsc.charAt(0);
+		
+		
+		String line; 
+		
+		int count = 0;
+		
+		
+		while(filesc.hasNext())
+		{
+			line = filesc.nextLine();
+			for(int j=0; j<line.length(); j++)
+			{
+				if(line.charAt(j)==character)
+				{
+					count += 1;
+				}
+			}
+		}
+		
+		System.out.println("The character " + character + " appears in the file " + count + " times.");
+		
+		filesc.close();
+	}
+}
+
+7.	Hotel Occupancy
+
+import java.util.Scanner;
+import java.text.*;
+
+public class HotelOccupancy {
+	
+	public static void main(String[] args) {
+	 int floors;
+	 double rooms = 0; 
+	 int roomsOccupied = 0;
+	 double totalRooms = 0;
+	 double totalRoomsOccupied = 0;
+	 double totalVacancy = 0;
+	 double occupancyRate = 0.0;
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter the number of floors: ");
+		floors = input.nextInt();
+		
+		while(floors < 1)
+		{
+			System.out.print("Invalid Input. Enter a number of floors greater than 0: ");
+			floors = input.nextInt();
+		}
+		
+		
+		for(int i=0; i<floors; i++)
+		{
+			System.out.print("Enter the number of rooms (Floor " + (int)(i + 1) + "): ");
+			rooms = input.nextInt();
+			
+			while(rooms < 10){
+				System.out.print("Invalid input. Enter a number of rooms greater than 9 \n(Floor " + (int)(i + 1) + "): ");
+				rooms = input.nextInt();
+			}
+			
+			System.out.print("Enter the number of rooms occupied(Floor " + (int)(i + 1) + "): ");
+			roomsOccupied = input.nextInt();
+			
+			totalRooms += rooms;
+			
+			totalRoomsOccupied += roomsOccupied;
+		}
+		
+		totalVacancy = totalRooms - totalRoomsOccupied; 
+		
+		occupancyRate = (totalRoomsOccupied/totalRooms)*100;
+		
+		// Decimal formating 
+		  NumberFormat df = DecimalFormat.getInstance();
+		  df.setMaximumFractionDigits(2);
+		
+		System.out.println("Total Rooms: " + totalRooms + "\nOccupied(QTY): " + totalRoomsOccupied + 
+							"\nVacant Rooms(QTY): " + totalVacancy + "\nOccupancy Rate: " + df.format(occupancyRate) + "%");
+	}
+}
+
+8.	Average Rainfall
+
+import java.util.Scanner;
+import java.text.*;
+
+public class AverageRainfall 
+{
+
+	public static void main(String[] args)
+	{
+		int years;
+		final int MONTHS = 12; 	
+		int totalMonths = 0;
+		double monthlyRain;	
+		double totalRainfall = 0;
+		NumberFormat df = DecimalFormat.getInstance();		    // Decimal formating
+		df.setMaximumFractionDigits(2);		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the number of years: ");
+		years = input.nextInt();
+		System.out.println("Enter the rainfall amount for each month in inches ");
+		for(int i=0; i < years; i++)
+		{
+			for(int j=1; j<MONTHS+1; j++)
+			{
+				switch(j){
+				case 1:
+					System.out.print("January: ");
+					break;
+				case 2:
+					System.out.print("February: ");
+					break;
+				case 3:
+					System.out.print("March: ");
+					break;
+				case 4: 
+					System.out.print("April: ");
+					break;
+				case 5:
+					System.out.print("May: ");
+					break;
+				case 6:
+					System.out.print("June: ");
+					break;
+				case 7:
+					System.out.print("July: ");
+					break;
+				case 8:
+					System.out.print("August: ");
+					break;
+				case 9:
+					System.out.print("September: ");
+					break;
+				case 10:
+					System.out.print("October: ");
+					break;
+				case 11:
+					System.out.print("November: ");
+					break;
+				case 12:
+					System.out.print("December: ");
+				}
+				monthlyRain = input.nextDouble();
+				totalRainfall += monthlyRain;
+			}
+			totalMonths += MONTHS;
+		}
+		
+		double avgRainfall = totalRainfall/totalMonths;	
+		System.out.println("");
+		System.out.println("Total Months: " + totalMonths + "\nTotal Rainfall: " + df.format(totalRainfall) + " inches" +
+				"\nAverage Rainfall: " + df.format(avgRainfall) + " inches");
+	}
+}
+
+9.	Population
+
+import java.util.Scanner;
+import java.text.*;
+
+public class Population
+ {
+	
+	public static void main(String[] args) 
+	{
+		
+		Scanner input = new Scanner(System.in);							
+		NumberFormat df = DecimalFormat.getInstance();					
+	    df.setMaximumFractionDigits(2);
+		int days;														
+		double organisms = 0;										   		
+		double increaseRate = 0;			
+		
+		System.out.print("Number of days to multiply: ");
+		days  = input.nextInt();										
+		
+		while(days < 1)
+		{
+			System.out.print("Enter a value greater than 0: ");
+			days  = input.nextInt();
+		}
+		
+		System.out.print("Number of organisms: ");
+		organisms = input.nextDouble();										
+		
+		while( organisms < 2)
+		{												
+			System.out.print("Enter a value greater than 1: ");
+			organisms = input.nextDouble();	
+		}
+		
+		System.out.print("Percentage of increase: ");
+		increaseRate = input.nextDouble()/100;								
+		
+		while( increaseRate < 0){											
+			System.out.print("Ivalid entry. Re-enter a non-negative value: ");
+			increaseRate = input.nextDouble();	
+		}
+		
+		System.out.println(""); 
+		
+		System.out.println("Day" +"       Population" + "       Percent of Increase");	
+		System.out.println("_______________________________________________");
+		System.out.println("  1           " + df.format(organisms));
+		for(int i=2; i<days + 1; i++){
+			organisms += (organisms *= increaseRate);
+			System.out.println("  " +i + "           " + df.format(organisms) + "                " + (increaseRate*100)+"%");
+		}
+	}
+}
+
+
+10.	Largest and Smallest
+
+import java.util.Scanner;
+
+public class LargestAndSmallest 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		int value; 		
+	
+		int smallest;
+		
+		int largest = 0; 								
+		
+		Scanner sc = new Scanner(System.in);			
+		
+		System.out.println("Instructions: The computer will prompt you for a");
+		System.out.println("number value each time until you enter the number" + "\'\n-99'");
+		
+		System.out.print("Enter a number: ");			
+		value = sc.nextInt();
+		
+		smallest = value;
+		
+		while(value != -99)
+		{							
+			System.out.print("Enter a number: ");			
+			value = sc.nextInt();
+			if(value != -99)
+			{
+				if (value > smallest)
+				{
+					largest = value;
+				}
+				else{
+					smallest =value;					
+				}		
+			}
+		}
+		
+		System.out.println("Smallest Value: " + smallest + "\nLargest Value: " + largest);
+	}
+}
+
+11.	Celsius to Fahrenheit Table 
+import java.text.*;
+
+public class CelsiusToFahrenheitTable
+ {
+
+	public static void main(String[] args)
+	{
+			
+			System.out.println("                Temperature (Degrees)");
+			System.out.println("----------------------------------------------");
+			System.out.println("   Celsius " + "                  Fahrenheit");
+			
+			NumberFormat df = DecimalFormat.getInstance();
+		    df.setMaximumFractionDigits(2);
+		    
+			int count = 20;
+			double fahrenheit;
+			
+			for(int i = 0; i<=count; i++)
+			{
+				fahrenheit = 9/5.0*i+32;
+				System.out.println("      " + i  + "                       " +  df.format(fahrenheit));
+			}
+	}
+}
+
+12.	Bar Chart
+
+import java.util.*;
+
+public class BarChart 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+				
+		int sales = 0;
+		System.out.println("Enter sales greater >= $100 ");
+
+		System.out.print("Enter today's sales for store 1: ");
+		int s1 = sc.nextInt();
+		
+		System.out.print("Enter today's sales for store 2: ");
+		int s2 = sc.nextInt();
+		
+		System.out.print("Enter today's sales for store 3: ");
+		int s3 = sc.nextInt();
+		
+		System.out.print("Enter today's sales for store 4: ");
+		int s4 = sc.nextInt();
+		
+		System.out.print("Enter today's sales for store 5: ");
+		int s5 = sc.nextInt();
+		
+
+		System.out.println("");
+		
+		System.out.println("SALES BAR CHART");
+		for(int k = 1; k <= 5; k++)
+		{
+			System.out.print("Store " + k + ": ");
+			switch(k){
+			case 1:
+				sales = s1;
+				break;
+			case 2:
+				sales = s2;
+				break;
+			case 3:
+				sales = s3;
+				break;
+			case 4: 
+				sales = s4;
+				break;
+			case 5:
+				sales = s5;
+			}
+			for(int l=1; l<=sales/100; l++)
+			{
+				System.out.print("*");
+				
+			}
+			System.out.println("");
+		}
+		
+	}
+}
+
+
+=============================
+|ASSIGNMENT 3    			|
+|+++++++++++++++++++++++++++|
+|Chapter 5		         	|
+=============================
+
+Programing Challenge
+1.	public class Char{
+	public static void main(String args[]){
+		String str = "Darshil";
+		showChar(str,2);
+	}
+		static void showChar(String name,Integer i){
+			char a;
+			a = name.charAt(i);		
+			System.out.println("Character at is :" +a);
+	}}
+2.	import javax.swing.JOptionPane;
+public class Retail
+{
+	public static void main(String args[])
+	{
+		String str;
+		str = JOptionPane.showInputDialog("Enter Value :");
+		Double.parseDouble(str);
+		Double c1 = Double.valueOf(str);
+		calculateRetail(c1,100.0);		
+	}
+	static void calculateRetail(Double f,Double f1)
+	{
+		Double ans;
+		ans = f + f * f1/100;
+		System.out.println("Total Value is : "+ans);
+	}}
+3.	import java.util.*;
+public class conversion1
+{
+static double showKilometers(double meters) {
+
+    double kilometers = meters * 0.001;
+
+    return kilometers;
+}
+static double showInches(double meters) {
+
+    double inches = meters * 39.37;
+
+    return inches;
+}
+static double showFeet(double meters) {
+
+    double feet = meters * 3.281;
+
+    return feet;
+}
+static List<String> getMenu() {
+
+    List<String> menuItems = new ArrayList<String>();
+    menuItems.add("Convert to kilometers");
+    menuItems.add("Convert to inches");
+    menuItems.add("Convert to feet");
+    menuItems.add("Quit the program");
+
+    return menuItems;
+}
+public static void main(String args[])
+{
+int selection; // Menu selection
+double d1; // d1 in meters
+
+Scanner keyboard = new Scanner(System.in);
+System.out.print("Enter a d1 in meters: ");
+d1 = keyboard.nextDouble();
+
+List<String> menuItems = getMenu();
+do {
+
+    for (int x = 0; x < menuItems.size(); x++) {
+        System.out.println((x + 1) + ". " + menuItems.get(x));
+    }
+    System.out.print("\nEnter your choice: ");
+    selection = keyboard.nextInt();
+    while (selection < 1 || selection > 4) {
+        System.out.print("Invalid selection. Enter your choice: ");
+        selection = keyboard.nextInt();
+    }
+    switch (selection) {
+        case 1:
+           System.out.println(d1 + " meters is " +
+                   showKilometers(d1) + " kilometers.");
+            break;
+        case 2:
+           System.out.println(d1 + " meters is " +
+                   showInches(d1) + " inches.");
+            break;
+        case 3:
+           System.out.println(d1 + " meters is " +
+                   showFeet(d1) + " feet.");
+            break;
+        case 4:
+            System.out.println("Bye!");
+    }
+
+    System.out.println();
+
+} while (selection != 4);
+}}
+4.	import java.util.Scanner;
+ 
+ 
+ public class RectangularArea
+ {
+ 	public static void main(String[] args)
+ 	{
+ 		Scanner input = new Scanner(System.in);
+ 		double length = getLength(input);
+ 		double width = getWidth(input);
+ 		double area = getArea(length, width);
+ 		displayData(length, width, area);
+ 	}
+ 	
+ 	public static double getLength(Scanner input)
+ 	{
+ 		System.out.println("Enter the length");
+ 		double length = input.nextDouble();
+ 		return length;
+ 	}
+ 	
+ 	public static double getWidth(Scanner input)
+ 	{
+ 		System.out.println("Enter the width");
+ 		double width = input.nextDouble();
+ 		return width;
+ 	}
+ 	
+ 	public static double getArea(double length, double width)
+ 	{
+ 		double area = length * width;
+ 		return area;
+ 	}
+ 	
+ 	public static void displayData(double length, double width, double area)
+ 	{
+ 		System.out.println("The length is: " + length + "\nThe width is: " + width + "\nThe area is: " + area);				
+ 	}
+
+}
+5.
+ import java.util.Scanner;
+ import java.text.DecimalFormat;
+ 
+ public class PaintJobEstimator
+ {
+ 	
+ 	public static void main(String[] args)
+ 	{
+ 		Scanner input = new Scanner(System.in);
+ 		int numberOfRooms;
+ 		double pricePerGallon;
+ 		
+ 		System.out.println("Enter the number of rooms?");
+ 		numberOfRooms = input.nextInt();
+ 		
+ 		System.out.println("Enter the price of paint per gallon");
+ 		pricePerGallon = input.nextDouble();
+ 		
+ 		int roomCount = 1;
+ 		double totalWallSpace = 0;
+ 		
+ 		while (roomCount <= numberOfRooms)
+ 		{
+ 			System.out.println("Room No." + roomCount);
+ 			System.out.println("Enter wall Space");
+ 			double wallSpaceForRoom = input.nextInt();
+ 			roomCount += 1;
+ 			totalWallSpace += wallSpaceForRoom;
+ 		}
+ 		
+ 		double paintGallonsRequired = gallonsOfPaint(totalWallSpace);
+ 		double laborHoursRequired = hoursOfLaborRequired(totalWallSpace);
+ 		double laborCost = laborCharges(laborHoursRequired);
+ 		double paintCost = costOfPaint(paintGallonsRequired, pricePerGallon);
+ 		totalCostOfPaintJob(laborCost, paintCost, totalWallSpace);
+ 	}
+ 	
+ 	public static double gallonsOfPaint(double wallSpace)
+ 	{
+ 		double paintGallons = wallSpace/115;
+ 		return paintGallons;
+ 	}
+ 	
+ 	public static double hoursOfLaborRequired(double wallSpace)
+ 	{
+ 		double laborHours = (wallSpace/115) * 8;
+ 		return laborHours;
+ 	}
+ 	
+ 	public static double costOfPaint(double gallons, double price)
+ 	{
+ 		double paintCost = gallons * price;
+ 		return paintCost;
+ 	}
+ 	
+ 	public static double laborCharges(double hours)
+ 	{
+ 		double totalLaborCharges = hours * 18;
+ 		return totalLaborCharges;
+ 	}
+ 	
+ 	public static void totalCostOfPaintJob(double laborCost, double paintCost, double totalWallSpace)
+ 	{
+ 		DecimalFormat twoDecimal = new DecimalFormat("#,##0.00");
+ 		double totalCost = laborCost + paintCost;
+ 		System.out.println("Total Wall Space: " + totalWallSpace);
+ 		System.out.println("Labor cost: $" + twoDecimal.format(laborCost));
+ 		System.out.println("Paint cost: $" + twoDecimal.format(paintCost));
+ 		System.out.println("The totalcost of the paint job is: $" + twoDecimal.format(totalCost));
+ 	}	
+ 	
+}
+
+
+=============================
+|ASSIGNMENT 4    			|
+|+++++++++++++++++++++++++++|
+|Chapter 6		         	|
+=============================
+
+•	Pesonal Information
+class PersonalInfo
+{
+	public static void main(String args[])
+	{
+		info i1 = new info();
+		info i2 = new info();
+		info i3 = new info();
+		i1.setName("Darshil");
+		i2.setName("Harpal");
+		i3.setName("Varinder");
+		i1.setAddress("7,melpham Ct");
+		i2.setAddress("215,Queens Street");
+		i3.setAddress("21,Brampton Road");
+		i1.setAge(21);
+		i2.setAge(20);
+		i3.setAge(24);
+		i1.setNumber("647-723-5386");
+		i2.setNumber("647-723-5386");
+		i3.setNumber("647-723-5386");
+	
+	System.out.println("Name :"+i1.getName()+"Address :"+i1.getAddress()+"Age :"+i1.getAge()+"Number :"+i1.getNumber());
+	System.out.println("Name :"+i2.getName()+"Address :"+i2.getAddress()+"Age :"+i2.getAge()+"Number :"+i2.getNumber());
+	System.out.println("Name :"+i3.getName()+"Address :"+i3.getAddress()+"Age :"+i3.getAge()+"Number :"+i3.getNumber());
+}
+}
+class info
+{
+	private String name;
+	private String address;
+	private int age;
+	private String number;
+	
+	public String getName()
+	{
+		return name;
+	}
+	public String getAddress()
+	{
+		return address;
+	}
+	public int getAge()
+	{
+		return age;
+	}
+	public String getNumber()
+	{
+		return number;
+	}
+	public void setName(String n1)
+	{
+		name = n1;
+	}
+	public void setAddress(String a1)
+	{
+		address = a1;
+	}
+	public void setAge(int i)
+	{
+		age = i;
+	}
+	public void setNumber(String n)
+	{
+		number = n;
+	}
+public info()
+{
+	name = "";
+	address = "";
+	age = 0;
+	number = "";
+}
+}
+•	Circle
+import java.util.Scanner;
+class Area
+{
+	public static void main(String[] args) {
+    Scanner keyboard = new Scanner(System.in);
+    System.out.print("Enter the radius of a circle: ");
+    double radius = keyboard.nextDouble();
+    keyboard.close();
+    Circle c1 = new Circle();
+    Circle c2 = new Circle(radius);
+    System.out.println("Area is " + c2.getArea());
+    System.out.println("Diameter is " + c2.getDiameter());
+    System.out.println("Circumference is " + c2.getCircumference());
+
+}
+}
+class Circle {
+ 	
+    private final double PI = 3.14159;
+    private double radius;
+
+    public Circle() {
+        radius = 0.0;
+    }
+
+    public Circle(double r) {
+        radius = r;
+    }
+
+    public void setRadius(double r) {
+        radius = r;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public double getArea() {
+        return PI * radius * radius;
+    }
+
+    public double getDiameter() {
+        return radius * 2;
+    }
+
+    public double getCircumference() {
+        return 2 * PI * radius;
+    }
+}
+•	Roulet
+import java.util.Scanner;
+class RouletPocket
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int n1;
+		System.out.println("Enter numbers in the range from 0-36 :");
+		n1 = sc.nextInt();
+		Roulet r1 = new Roulet(n1);
+		System.out.println("The Color is:"+r1.getColor());
+	}
+}
+class Roulet
+{
+	private int n;
+public String getColor()
+{
+	if(n < 1)
+	{
+		return "green";
+	}
+	else if(n < 11)
+	{
+		if((n % 2) != 0)
+		{
+			return "red";
+		}
+		else if( (n % 2) == 0)
+		{
+			return "black";
+		}
+	}	
+		else if (n < 19)
+		{
+			if ((n % 2) != 0)
+			{
+				return "black";
+			}
+			else if ( (n % 2) == 0)
+			{
+				return "red";  	
+			}
+		}	
+		else if (n < 29)
+		{
+			if ((n % 2) != 0)
+			{
+				return "red";
+			}
+			else if ( (n % 2) == 0)
+			{
+				return "black";  	
+			}
+		}	
+		else if (n < 37)
+		{
+			if ((n % 2) != 0)
+			{
+				return "black";
+			}
+			else if ( (n % 2) == 0)
+			{
+				return "red";  	
+			}
+		}
+		return "Number is Out of range";	
+	}
+public Roulet(int given)
+{
+	n = given;
+}
+	
+}	
+•	Coin
+import java.util.Random;
+class CoinTest
+{
+	public static void main(String args[])
+	{
+		coin c1 = new coin();
+		int heads = 0;
+		int tails = 0;
+		int toss = 20;
+		System.out.println("Side :"+c1.getSide());
+		for (int i=1;i<=20;i++)
+		{
+			c1.toss();
+			if(c1.getSide() == "heads")
+			{
+				heads += 1;		
+			}
+			else
+			{
+				tails += 1;
+			}
+			System.out.println("Sides :"+c1.getSide());
+		}
+	System.out.println("Out of" +toss+ "tosses, there were" + heads + "heads and " + tails + " tails" );
+	}
+}
+public class coin
+{
+	private String side;
+	public void toss()
+	{
+		Random r1 = new Random();
+		int random;
+		random = r1.nextInt(2);
+		if(random == 0)
+		{
+			side = "tails";
+		}
+		else
+		{
+			side = "heads";
+		}
+	}
+public String getSide()
+{
+	return side;
+}
+public coin()
+	{
+		toss();
+	}
+}
+
+
+
+=============================
+|ASSIGNMENT 4    			|
+|+++++++++++++++++++++++++++|
+|Chapter 7		         	|
+=============================
+
+
+•	Magic Square
+import java.util.*;
+public class MagicSquare{
+  public static void main(String args[]){
+    int[][] q=new int[3][3];
+    String s=new String();
+    Scanner k=new Scanner(System.in);
+    boolean magic=false;
+    System.out.println("Row 1, numbers (0-9) divided by spaces.");
+    s=k.nextLine();
+    for(int a=0;a<3;a++)
+      q[a][0]=Integer.parseInt(s.substring(a*2,(a*2)+1));
+    System.out.println("Row 2, numbers (0-9) divided by spaces.");
+    s=k.nextLine();
+    for(int a=0;a<3;a++)
+      q[a][1]=Integer.parseInt(s.substring(a*2,(a*2)+1));
+    for(int a=0;a<10;a++){
+      q[2][2]=a;
+      for(int b=0;b<10;b++){
+        q[1][2]=b;
+        for(int c=0;c<10;c++){
+          q[0][2]=c;
+          if(q[0][0]+q[1][0]+q[2][0]==15&&q[0][1]+q[1][1]+q[2][1]==15&&q[0][2]+q[1][2]+q[2][2]==15&&
+             q[0][0]+q[0][1]+q[0][2]==15&&q[1][0]+q[1][1]+q[1][2]==15&&q[2][0]+q[2][1]+q[2][2]==15&&
+             q[0][0]+q[1][1]+q[2][2]==15&&q[0][2]+q[1][1]+q[2][0]==15){
+            System.out.println("Possible solution: "+c+" "+b+" "+a);
+            magic=true;
+          }
+        }
+      }
+      if((a==9)&&(magic==false))
+        System.out.println("Your square sucks");
+    }
+  }
+}
+
+
+•	Rain Fall
+
+import java.util.Scanner;
+public class rainfall {
+
+    public static void main(String[] args) {
+        Scanner cs= new Scanner(System.in);
+        double rain[] = new double[12];
+        double sum = 0;
+        double avg = 0;
+        double most = 0;
+        double least = 0;
+        System.out.println("Month\tRainfall (In inches)");
+
+        String months[]={"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+
+        for (int i=0;i<months.length;i++) {
+            System.out.println(months[i]+" :");
+            double val = cs.nextDouble();
+            while(val<0){
+                System.out.println("negatives not allowed ! enter again");
+                val = cs.nextDouble();
+            }
+            rain[i]=val;
+            sum+=val;
+        }
+
+        avg = sum / 12;
+
+        System.out.println("The sum of all the rain is: " + sum);
+        System.out.println("The average rainfall was:" + avg + " inches");
+        most =getMaxValue(rain);
+        least=getMinValue(rain);
+        System.out.println("The max rain is: " + most);
+        System.out.println("The min rain is: " + least);
+
+    }
+
+    private static double getMaxValue(double[] rain) {
+        double max = 0;
+        for (double i : rain) {
+            if (i > max) {
+                max = i;
+            }
+        }
+        return max;
+    }
+
+    private static double getMinValue(double[] rain) {
+
+        double min = Double.MAX_VALUE;
+        for (double i : rain) {
+                        System.out.println(i);
+            if (i < min) {
+                min = i;
+            }
+        }
+        System.out.println(min);
+        return min;
+    }
+}
+•	Phone Book
+import java.util.*;
+public class PhoneBookEntries {
+    private String name;
+    private String number;
+   
+    PhoneBookEntries()
+    {
+        name="";
+        number="";
+    }
+    PhoneBookEntries(String nm,String no)
+    {
+        this.name=nm;
+        this.number=no;
+    }
+   
+    public void setName(String n)
+    {
+        name=n;
+    }
+    public void setNumber(String num)
+    {
+        number=num;
+    }
+   
+    public String getName()
+    {
+        return name;
+    }
+    public String getNumber()
+    {
+        return number;
+    }
+   
+    public static void main(String [] arg)
+    {
+        ArrayList<PhoneBookEntries> pb1=new ArrayList<PhoneBookEntries>();
+       
+        Scanner sc=new Scanner(System.in);
+       
+        for(int i=0;i<5;i++)
+        {
+            System.out.println("Enter name of Person : ");
+            String name=sc.nextLine();
+            System.out.println("Enter number of Person : ");
+            String number=sc.nextLine();
+           
+            pb1.add(new PhoneBookEntries(name,number));
+        }
+       
+        System.out.println("Data as below");
+        for(int i=0;i<pb1.size();i++)
+        {
+            System.out.println("Name : "+pb1.get(i).getName());
+            System.out.println("Number : "+pb1.get(i).getNumber());
+            System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        }
+       
+    }
+   
+}
+•	Finding Names
+import java.util.ArrayList;/**Needed for ArrayList class*/
+import java.util.Scanner; /**Needed to use scanner*/
+import java.io.*;
+ 
+public class Names {
+ 
+    public static void main(String[] args) throws IOException /**Throws exceptions*/ 
+    {
+        /**Create an empty arrayList*/
+        ArrayList<String> nameList = new ArrayList <String>();
+         
+        String girl;
+        String boy;
+         
+        /**Create a Scanner object to read keyboard input*/
+        Scanner keyb = new Scanner(System.in);
+         
+        /**Hardcode file of girl names into constructor*/
+        File fileGirl = new File("GirlNames.txt");
+        Scanner inputFileGirl = new Scanner(fileGirl);
+         
+        /**Hardcode file of boy names into constructor*/
+        File fileBoy = new File("BoyNames.txt");
+        Scanner inputFileBoy = new Scanner(fileBoy);
+         
+        /**Read names in the girl names file*/
+        while (inputFileGirl.hasNext()){
+            nameList.add(inputFileGirl.next());
+        }
+        /**Close girl names file*/
+        inputFileGirl.close();
+         
+        /**Read names in the boy names file*/
+        while (inputFileBoy.hasNext()){
+            nameList.add(inputFileBoy.next());
+        }
+        /**Close boy names file*/
+        inputFileBoy.close();
+         
+        System.out.println("Please enter one girl and one boy name separeated by a new line: ");
+        girl = keyb.nextLine();
+        boy = keyb.nextLine();
+         
+        int girlIndex = nameList.indexOf(girl);
+        if(nameList.contains(girl)){
+                System.out.println(girl + " was found, and was ranked " + (girlIndex + 1) + " by popularity."); 
+            }
+            else {
+                System.out.println(girl + " was not found in the list of 200 most popular girl names.");
+            }
+         
+        int boyIndex = nameList.indexOf(boy);
+        if(nameList.contains(boy)){
+                System.out.println(boy + " was found, and was ranked " + (boyIndex + 1) + " by popularity.");
+            }
+            else {
+                System.out.println(boy + " was not found in the list of 200 most popular boy names.");
+            }
+             
+    }
+     
+}
